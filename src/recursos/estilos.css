@@ -1,0 +1,436 @@
+.root {
+    -fx-background-color: #f8f9fa;
+    -fx-font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    -fx-font-size: 14px;
+}
+
+.hboxUser1 {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-padding: 12 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 4, 0, 0, 1);
+}
+.menu-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.menu {
+    -fx-text-fill: #333333;
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+    -fx-padding: 6 12;
+    -fx-background-radius: 4;
+}
+.menu:hover {
+    -fx-background-color: #f0f2f5;
+    -fx-cursor: hand;
+    -fx-text-fill: #333333;
+}
+.menu:showing {
+    -fx-background-color: #e8f4fd;
+    -fx-text-fill: #333333;
+}
+.menu-item {
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-padding: 8 16;
+    -fx-font-size: 13px;
+}
+.menu-item:hover {
+    -fx-background-color: #f0f2f5;
+    -fx-text-fill: #333333;
+}
+.radio-menu-item {
+    -fx-text-fill: #333333;
+}
+.radio-menu-item:selected {
+    -fx-font-weight: 500;
+}
+.check-box {
+    -fx-text-fill: #333333;
+}
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #adb5bd;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+}
+.check-box:selected .mark {
+    -fx-background-color: #0078d4;
+}
+.loginBoton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #666666;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-padding: 8 16;
+    -fx-background-radius: 4;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-cursor: hand;
+}
+.loginTitulo{
+    -fx-font-size: 40px;
+    -fx-font-weight: 500;
+}
+.loginBoton:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #0078d4;
+    -fx-border-color: #0078d4;
+}
+.loginBoton:pressed {
+    -fx-background-color: #e8f4fd;
+}
+.tablaContainer {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0, 0, 1);
+}
+.detallesContainer {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0, 0, 1);
+}
+.tituloSeccion {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #212529;
+    -fx-padding: 0 0 15 0;
+}
+.tituloDetalles {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #212529;
+    -fx-padding: 0 0 15 0;
+}
+.split-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+
+.split-pane-divider {
+    -fx-background-color: #e9ecef;
+    -fx-padding: 0 1 0 1;
+}
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-padding: 0;
+}
+.table-view .column-header-background {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 4 4 0 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 12 8;
+    -fx-border-color: transparent;
+}
+.table-view .table-cell {
+    -fx-text-fill: #212529;
+    -fx-border-color: transparent;
+    -fx-padding: 10 8;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+}
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.table-view .table-row-cell:odd {
+    -fx-background-color: #fcfcfc;
+}
+.table-view .table-row-cell:even {
+    -fx-background-color: white;
+}
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f0f7ff;
+    -fx-cursor: hand;
+}
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: #0078d4;
+}
+.table-view .table-row-cell:fila-inactiva {
+    -fx-text-fill: #adb5bd;
+    -fx-font-style: italic;
+    -fx-background-color: #f8f9fa;
+}
+.scrollDetalles {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-padding: 0;
+}
+.scroll-pane .viewport {
+    -fx-background-color: white;
+}
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .track {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #ced4da;
+    -fx-background-radius: 4;
+}
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #adb5bd;
+}
+.vboxDetalles {
+    -fx-background-color: white;
+    -fx-padding: 16;
+    -fx-spacing: 12;
+}
+.fila-detalle {
+    -fx-spacing: 20;
+    -fx-padding: 8 0;
+    -fx-border-color: #f1f3f5;
+    -fx-border-width: 0 0 1 0;
+}
+.fila-detalle:last-child {
+    -fx-border-width: 0;
+}
+.etiqueta-detalle {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #495057;
+    -fx-min-width: 120;
+}
+.valor-normal {
+    -fx-text-fill: #212529;
+    -fx-font-size: 13px;
+}
+.valor-alta {
+    -fx-text-fill: #ff4444;
+    -fx-font-size: 13px;
+}
+.valor-media {
+    -fx-text-fill: #ff9900;
+    -fx-font-size: 13px;
+}
+.valor-baja {
+    -fx-text-fill: #44aa44;
+    -fx-font-size: 13px;
+}
+.valor-descripcion {
+    -fx-text-fill: #666666;
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-wrap-text: true;
+}
+.valor-titulo {
+    -fx-text-fill: #212529;
+    -fx-font-size: 13px;
+    -fx-max-width: 170px;
+    -fx-wrap-text: true;
+}
+
+.contadorContainer {
+    -fx-padding: 8 0 0 0;
+}
+.contadorLabel {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+.activa-si {
+    -fx-text-fill: #28a745 !important;
+    -fx-font-weight: 500;
+}
+.activa-no {
+    -fx-text-fill: #dc3545 !important;
+    -fx-font-weight: 500;
+}
+.valor-na {
+    -fx-text-fill: #adb5bd !important;
+    -fx-font-style: italic;
+}
+.button, .menu, .menu-item, .table-row-cell {
+    -fx-transition: all 0.15s ease;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #0078d4;
+    -fx-border-width: 2;
+}
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0, 0, 1);
+    -fx-padding: 16;
+}
+.badge {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-padding: 2 6;
+    -fx-background-radius: 10;
+}
+.texto-ayuda {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+.titulo-secundario {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #495057;
+}
+.label-destacado {
+    -fx-font-weight: 600;
+    -fx-text-fill: #212529;
+}
+.separador {
+    -fx-background-color: #e9ecef;
+    -fx-pref-height: 1;
+    -fx-pref-width: 100%;
+}
+.app-logo {
+    -fx-fill: linear-gradient(from 0% 0% to 100% 100%, #0078d4 0%, #005a9e 100%);
+}
+.menu:hover .label {
+    -fx-text-fill: #333333 !important;
+}
+.menu:showing .label {
+    -fx-text-fill: #333333 !important;
+}
+.context-menu .menu-item:hover .label {
+    -fx-text-fill: #333333 !important;
+}
+.menu:focused,
+.menu:hover:focused,
+.menu:showing {
+    -fx-background-color: #e8f4fd !important;
+}
+.menu:focused .label,
+.menu:hover:focused .label,
+.menu:showing .label {
+    -fx-text-fill: #333333 !important;
+}
+#btSolucionar:pressed, #btEspera:pressed, #btCerrar:pressed,
+#btReabrir:pressed, #btEditar:pressed {
+    -fx-background-color: #4e555b;
+}
+.boton-icono-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+    -fx-font-size: 11px;
+    -fx-font-weight: 500;
+    -fx-padding: 4 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+    -fx-min-width: 60px;
+    -fx-max-width: 60px;
+}
+
+.boton-icono-btn:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0078d4;
+}
+
+.boton-icono-btn:pressed {
+    -fx-background-color: transparent;
+    -fx-text-fill: #005a9e;
+}
+/* Contenedor principal */
+.botonesContainer {
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1px 0 0 0;
+    -fx-padding: 20 30;
+}
+
+/* Grupo de botones */
+.botonesGrupo {
+    -fx-padding: 0;
+    -fx-spacing: 12;
+}
+
+/* Estilos base para botones transparentes */
+.boton-transparente {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 6 10;
+    -fx-transition: all 0.3s;
+}
+
+.boton-transparente:hover {
+    -fx-background-color: rgba(0, 123, 255, 0.08);
+    -fx-border-color: #adb5bd;
+}
+
+.boton-transparente:pressed {
+    -fx-background-color: rgba(0, 123, 255, 0.12);
+    -fx-border-color: #6c757d;
+}
+
+/* Iconos grandes */
+.icono-grande {
+    -fx-fit-width: 28;
+    -fx-fit-height: 28;
+    -fx-opacity: 0.9;
+}
+/* Texto de botones */
+.texto-boton {
+    -fx-text-fill: #2d3748;
+    -fx-font-family: 'Segoe UI Semibold', 'Arial', sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+}
+/* Textos del estado */
+.texto-secundario {
+    -fx-text-fill: #6c757d;
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+    -fx-font-size: 10px;
+    -fx-font-weight: 600;
+    -fx-letter-spacing: 0.8px;
+    -fx-text-transform: uppercase;
+}
+
+.texto-fecha {
+    -fx-text-fill: #495057;
+    -fx-font-family: 'Segoe UI Semibold', 'Arial', sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+}
+
+.texto-online {
+    -fx-text-fill: #28a745;
+    -fx-font-family: 'Segoe UI Semibold', 'Arial', sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-letter-spacing: 0.5px;
+}

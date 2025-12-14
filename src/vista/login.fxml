@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="controladores.LoginController"
+          styleClass="loginPanelGrid"
+          stylesheets="@../recursos/estilos.css"
+          alignment="center">
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+    <VBox spacing="15" alignment="center">
+        <Label fx:id="loginTitulo" text="Login" styleClass="loginTitulo"/>
+        <Label fx:id="loginSubtitulo" text="Registro de incidencias" styleClass="loginSubtitulo"/>
+        <VBox spacing="5" alignment="center_left">
+            <Label fx:id="loginEmail" text="Email:"/>
+            <TextField fx:id="tfEmail" prefWidth="300"/>
+        </VBox>
+        <VBox>
+            <Label fx:id="loginContraseña" text="Contraseña:"/>
+            <PasswordField fx:id="pfPassword" prefWidth="300"/>
+        </VBox>
+        <Button fx:id="loginBoton" text="Login"
+                styleClass="loginBoton" prefWidth="300"/>
+        <Label fx:id="lbErrorLogin" visible="false" style="-fx-text-fill:red;"/>
+    </VBox>
+</GridPane>

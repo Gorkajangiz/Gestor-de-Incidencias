@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controladores.UserDashboardController"
+            stylesheets="@../recursos/estilos.css"
+            style="-fx-background-color: #f8f9fa;">
+    <top>
+        <HBox spacing="15" styleClass="hboxUser1" alignment="CENTER_LEFT">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ImageView fitWidth="32" fitHeight="32" preserveRatio="true">
+                    <image>
+                        <Image url="@../recursos/pfp.png"/>
+                    </image>
+                    <clip>
+                        <Rectangle width="32" height="32" arcWidth="6" arcHeight="6" styleClass="app-logo"/>
+                    </clip>
+                </ImageView>
+                <VBox spacing="2">
+                    <Label text="Gestor de Incidencias"
+                           style="-fx-font-weight: 600; -fx-font-size: 16px; -fx-text-fill: #212529;"/>
+                    <Label text="Panel de usuario" style="-fx-font-size: 12px; -fx-text-fill: #6c757d;"/>
+                </VBox>
+            </HBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <MenuBar>
+                <menus>
+                    <Menu text="Archivo">
+                        <items>
+                            <MenuItem fx:id="miInforme" text="Generar Informe"/>
+                            <MenuItem fx:id="miImprimir" text="Imprimir"/>
+                            <SeparatorMenuItem/>
+                            <MenuItem fx:id="miSalir" text="Salir"/>
+                        </items>
+                    </Menu>
+                    <Menu text="Filtrado">
+                        <items>
+                            <Menu text="Prioridad">
+                                <items>
+                                    <RadioMenuItem fx:id="rmiAlta" text="Alta"/>
+                                    <RadioMenuItem fx:id="rmiMedia" text="Media"/>
+                                    <RadioMenuItem fx:id="rmiBaja" text="Baja"/>
+                                </items>
+                            </Menu>
+                            <Menu text="Estado">
+                                <items>
+                                    <RadioMenuItem fx:id="rmiPendiente" text="Pendiente"/>
+                                    <RadioMenuItem fx:id="rmiEnProceso" text="En proceso"/>
+                                    <RadioMenuItem fx:id="rmiEspera" text="En espera"/>
+                                </items>
+                            </Menu>
+                            <SeparatorMenuItem/>
+                            <MenuItem fx:id="miRestablecer" text="Restablecer filtros"/>
+                            <MenuItem text="Mostrar cerradas">
+                                <graphic>
+                                    <CheckBox fx:id="cbMostrarCerradas" selected="true"/>
+                                </graphic>
+                            </MenuItem>
+                        </items>
+                    </Menu>
+                    <Menu text="Ayuda">
+                        <items>
+                            <MenuItem text="Mostrar etiquetas">
+                                <graphic>
+                                    <CheckBox fx:id="cbMostrarEtiquetas" selected="true"/>
+                                </graphic>
+                            </MenuItem>
+                            <MenuItem fx:id="miManualDeUso" text="Manual de uso"/>
+                            <MenuItem fx:id="miAcercaDe" text="Acerca de"/>
+                        </items>
+                    </Menu>
+                </menus>
+            </MenuBar>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Label fx:id="lblUsuarioNombre" style="-fx-text-fill: #495057; -fx-font-weight: 500;"/>
+                <ImageView fitWidth="32" fitHeight="32" preserveRatio="true">
+                    <image>
+                        <Image url="@../recursos/pfp.png"/>
+                    </image>
+                    <clip>
+                        <Circle radius="16" centerX="16" centerY="16"/>
+                    </clip>
+                </ImageView>
+                <Button fx:id="btLogout" text="Cerrar sesión" onAction="#logout"
+                        styleClass="loginBoton"/>
+            </HBox>
+        </HBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.7">
+            <VBox styleClass="tablaContainer" spacing="10">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Mis incidencias" styleClass="tituloSeccion"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <HBox spacing="5" alignment="CENTER_RIGHT">
+                        <Label text="Mostrando:" style="-fx-text-fill: #6c757d; -fx-font-size: 13px;"/>
+                        <Label fx:id="lblContador" text="0"
+                               style="-fx-font-weight: 600; -fx-text-fill: #0078d4; -fx-font-size: 13px;"/>
+                        <Label text="incidencias" style="-fx-text-fill: #6c757d; -fx-font-size: 13px;"/>
+                    </HBox>
+                </HBox>
+                <TableView fx:id="tablaIncidencias" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                        <TableColumn fx:id="colTitulo" text="Título" prefWidth="250"/>
+                        <TableColumn fx:id="colEstado" text="Estado" prefWidth="110"/>
+                        <TableColumn fx:id="colFecha" text="Fecha" prefWidth="160"/>
+                        <TableColumn fx:id="colPrioridad" text="Prioridad" prefWidth="100"/>
+                    </columns>
+                </TableView>
+            </VBox>
+            <VBox styleClass="detallesContainer" spacing="10">
+                <Label text="Detalles de la incidencia" styleClass="tituloDetalles"/>
+                <ScrollPane fx:id="scrollDetalles"
+                            VBox.vgrow="ALWAYS"
+                            styleClass="scrollDetalles"
+                            fitToWidth="true">
+                    <content>
+                        <VBox fx:id="vboxDetalles"
+                              spacing="8"
+                              styleClass="vboxDetalles"/>
+                    </content>
+                </ScrollPane>
+            </VBox>
+        </SplitPane>
+    </center>
+    <bottom>
+        <HBox styleClass="botonesContainer" alignment="CENTER_LEFT">
+            <HBox styleClass="botonesGrupo" spacing="8">
+                <Button fx:id="btNueva" onAction="#nuevaIncidencia" styleClass="boton-transparente">
+                    <graphic>
+                        <HBox alignment="CENTER" spacing="6">
+                            <ImageView styleClass="icono-grande">
+                                <image>
+                                    <Image url="@../recursos/nueva.png"/>
+                                </image>
+                            </ImageView>
+                            <Label fx:id="lblBtNueva" text="Nueva" styleClass="texto-boton"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+                <Button fx:id="btEditar" onAction="#editarIncidencia" styleClass="boton-transparente">
+                    <graphic>
+                        <HBox alignment="CENTER" spacing="6">
+                            <ImageView styleClass="icono-grande">
+                                <image>
+                                    <Image url="@../recursos/editar.png"/>
+                                </image>
+                            </ImageView>
+                            <Label fx:id="lblBtEditar" text="Editar" styleClass="texto-boton"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+                <Button fx:id="btEliminar" onAction="#eliminarIncidencia" styleClass="boton-transparente">
+                    <graphic>
+                        <HBox alignment="CENTER" spacing="6">
+                            <ImageView styleClass="icono-grande">
+                                <image>
+                                    <Image url="@../recursos/eliminar.png"/>
+                                </image>
+                            </ImageView>
+                            <Label fx:id="lblBtEliminar" text="Eliminar" styleClass="texto-boton"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+                <Button fx:id="btReabrir" onAction="#reabrirIncidencia" styleClass="boton-transparente">
+                    <graphic>
+                        <HBox alignment="CENTER" spacing="6">
+                            <ImageView styleClass="icono-grande">
+                                <image>
+                                    <Image url="@../recursos/reabrir.png"/>
+                                </image>
+                            </ImageView>
+                            <Label fx:id="lblBtReabrir" text="Reabrir" styleClass="texto-boton"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+            </HBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox spacing="15" alignment="CENTER_RIGHT">
+                <Label text="Estado:" style="-fx-text-fill: #6c757d; -fx-font-size: 12px;"/>
+                <HBox spacing="5" alignment="CENTER">
+                    <Circle radius="4" fill="#28a745"/>
+                    <Label text="En línea" style="-fx-text-fill: #28a745; -fx-font-size: 12px;"/>
+                </HBox>
+                <Label fx:id="lblUltimaActualizacion" text="Actualizado: 10:30 AM"
+                       style="-fx-text-fill: #6c757d; -fx-font-size: 12px;"/>
+            </HBox>
+        </HBox>
+    </bottom>
+    <padding>
+        <Insets top="10" right="20" bottom="10" left="20"/>
+    </padding>
+</BorderPane>

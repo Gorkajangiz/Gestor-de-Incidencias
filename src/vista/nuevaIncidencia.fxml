@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.NuevaIncidenciaController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label fx:id="lblTituloDialogo" text="Nueva Incidencia" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Título:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="tituloField" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS"/>
+
+        <Label text="Descripción:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextArea fx:id="descripcionArea" GridPane.rowIndex="1" GridPane.columnIndex="1" prefRowCount="3" wrapText="true"/>
+
+        <Label text="Prioridad:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="prioridadCombo" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancelar" fx:id="btCancelar" onAction="#cancelar"/>
+        <Button text="Crear" fx:id="btGuardar" onAction="#guardar" defaultButton="true"/>
+    </HBox>
+</VBox>
