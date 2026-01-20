@@ -9,9 +9,9 @@ Aplicación de escritorio desarrollada en <strong>JavaFX</strong> para la gesti�
 <h2>📌 Descripción del proyecto</h2>
 
 <p>
-Este proyecto fue desarrollado como encargo académico con el objetivo de crear una aplicación capaz de gestionar
-incidencias en una empresa real. Aunque el enunciado original proponía el uso de Swing, la aplicación se implementó
-completamente en <strong>JavaFX</strong>, obteniendo puntuación adicional.
+Este proyecto fue desarrollado como trabajo de clase con el objetivo de crear una aplicación capaz de gestionar
+incidencias en una empresa real. Se nos dio la opción de utilizar Swing o JavaFX por un punto más, por lo que la hice
+completamente en <strong>JavaFX</strong>.
 </p>
 
 <p>
@@ -24,7 +24,7 @@ arquitectura y usabilidad.
 <h2>🛠️ Características principales</h2>
 
 <ul>
-  <li>Arquitectura basada en <strong>Modelo, DAO y gestor</strong> implementados manualmente</li>
+  <li>Arquitectura basada en <strong>MVC (Modelo, vista, controlador)</strong> implementados manualmente</li>
   <li>Documentación completa mediante <strong>Javadoc</strong></li>
   <li>Gestión de errores y pruebas de funcionamiento</li>
   <li>Filtros avanzados por estado y prioridad</li>
@@ -54,7 +54,7 @@ arquitectura y usabilidad.
 
 <h3>Administrador</h3>
 <ul>
-  <li>Acceso completo a todas las funcionalidades</li>
+  <li>Acceso completo a todas las funcionalidades anteriores</li>
   <li>Asignar técnicos a incidencias</li>
   <li>Eliminar incidencias de forma permanente</li>
 </ul>
