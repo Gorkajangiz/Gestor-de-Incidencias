@@ -28,4 +28,17 @@ edrian@centro.edu	      123
 ADMINISTRADOR:       CONTRASEÑA:
 admin@centro.edu	      123
 
-![Pantalla principal](resReadme/login.png)
+Login:
+<img src="resReadme/login.png" width="600">
+
+Panel de usuario:
+<img src="resReadme/user.png" width="600">
+
+Nueva incidencia:
+<img src="resReadme/nueva.png" width="600">
+
+Panel de técnico:
+<img src="resReadme/tecnico.png" width="600">
+
+Panel de administrador:
+<img src="resReadme/admin.png" width="600">
