@@ -14,16 +14,18 @@ segundos y un logo de empresa y de perfil de usuario (ambos placeholders). Las c
 suministrada son las siguientes:
 
 USUARIOS:            CONTRASEÑA:
-andoni@centro.edu	123
-julen@centro.edu	123
-victor@centro.edu	123
-arkhyp@centro.edu	123
-sergio@centro.edu	123
+andoni@centro.edu	      123
+julen@centro.edu	      123
+victor@centro.edu	      123
+arkhyp@centro.edu	      123
+sergio@centro.edu	      123
 
 TECNICOS:            CONTRASEÑA:
-gorka@centro.edu	123
-edrian@centro.edu	123
+gorka@centro.edu	      123
+edrian@centro.edu	      123
 
 
 ADMINISTRADOR:       CONTRASEÑA:
-admin@centro.edu	123
+admin@centro.edu	      123
+
+<img src="resReadme/login.png" width="600">
