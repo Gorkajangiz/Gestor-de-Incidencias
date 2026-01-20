@@ -28,4 +28,4 @@ edrian@centro.edu	      123
 ADMINISTRADOR:       CONTRASEÑA:
 admin@centro.edu	      123
 
-<img src="resReadme/login.png" width="600">
+![Pantalla principal](resReadme/login.png)
